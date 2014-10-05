@@ -1,0 +1,14 @@
+.views-container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.todo-table tr td:nth-child(1) {
+	width: 60%;
+}
+.todo-table tr td:nth-child(2) {
+	width: 30%;
+}
+.todo-table tr td:nth-child(3) {
+	width: 10%;
+}
