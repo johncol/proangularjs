@@ -1,8 +1,8 @@
 'use strict';
 
-var people = [{"id":1,"first_name":"Catherine","last_name":"Sanders","email":"csanders0@privacy.gov.au","country":"United Kingdom","ip_address":"88.70.111.103","profits":"979852.92"},
-{"id":2,"first_name":"Raymond","last_name":"Johnson","email":"rjohnson1@columbia.edu","country":"Chile","ip_address":"130.82.129.107","profits":"885002.54"},
-{"id":3,"first_name":"Albert","last_name":"Carroll","email":"acarroll5@ask.com","country":"United States","ip_address":"237.199.92.118","profits":"402783.20"}];
+var people = [{'id':1,'first_name':'Catherine','last_name':'Sanders','email':'csanders0@privacy.gov.au','country':'United Kingdom','ip_address':'88.70.111.103','profits':'979852.92'},
+{'id':2,'first_name':'Raymond','last_name':'Johnson','email':'rjohnson1@columbia.edu','country':'Chile','ip_address':'130.82.129.107','profits':'885002.54'},
+{'id':3,'first_name':'Albert','last_name':'Carroll','email':'acarroll5@ask.com','country':'United States','ip_address':'237.199.92.118','profits':'402783.20'}];
 
 /**
  * @ngdoc function

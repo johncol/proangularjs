@@ -9,5 +9,5 @@
  */
 angular.module('angularJsProApp')
   .controller('SanitizeCtrl', function ($scope) {
-    $scope.htmlData = "<p>This is <b onmouseover=alert('Attack!')>dangerous</b> data</p>";
+    $scope.htmlData = '<p>This is <b onmouseover=alert("Attack!")>dangerous</b> data</p>';
   });
