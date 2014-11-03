@@ -1,0 +1,8 @@
+<section class="well" ng-controller="C13ctrlscopelessctrlCtrl as ctrl">
+	<h3>Scopeless Controllers</h3>
+	<div class="form-group">
+		<label>Info</label>
+		<input type="text" class="form-control" ng-model="ctrl.info" ng-change="ctrl.notifyChange()">
+	</div>
+	<div class="alert alert-info" ng-bind="ctrl.info"></div>
+</section>

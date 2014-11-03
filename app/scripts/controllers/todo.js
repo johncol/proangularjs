@@ -12,19 +12,24 @@ angular.module('angularJsProApp')
 
         var todo = {
             user: 'John',
-            items: [{
-                action: 'Start reading AngularJS Pro',
-                done: true
-            }, {
-                action: 'Complete AngularJS Pro',
-                done: false
-            }, {
-                action: 'Dance Bachata',
-                done: false
-            }, {
-                action: 'Play DmC',
-                done: false
-            }]
+            items: [
+               {
+                  action:'Buy Flowers',
+                  done:false
+               },
+               {
+                  action:'Get Shoes',
+                  done:false
+               },
+               {
+                  action:'Collect Tickets',
+                  done:true
+               },
+               {
+                  action:'Call Joe',
+                  done:false
+               }
+            ]
         };
 
         $scope.todo = todo;
@@ -63,7 +68,7 @@ angular.module('angularJsProApp')
 
         var warningLevel = function() {
             return tooManyItemsToDo() ? 'label-warning' : 'label-success';
-        }
+        };
 
         $scope.warningLevel = warningLevel;
 

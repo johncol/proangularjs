@@ -1,0 +1,160 @@
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Isolated Scope with Two Way Binding and Behavior Binding</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Attr</th>
+					<th>Value</th>
+					<th>Control</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>rating</td>
+					<td>{{rating}}</td>
+					<td><input type="text" class="form-control" ng-model="rating"></td>
+				</tr>
+				<tr dir-scope-isolated-two-way-binding-behavior="rating" attr-value="rating" some-behavior="duplicateActualRating(someValue)"></tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Isolated Scope with One Way Binding With Scope Attributes</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Attr</th>
+					<th>Value</th>
+					<th>Control</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>rating</td>
+					<td>{{rating}}</td>
+					<td><input type="text" class="form-control" ng-model="rating"></td>
+				</tr>
+				<tr>
+					<td>views</td>
+					<td>{{views}}</td>
+					<td><input type="text" class="form-control" ng-model="views"></td>
+				</tr>
+
+				<tr dir-scope-isolated-one-way-binding="rating" attr-value="{{rating}}"></tr>
+				<tr dir-scope-isolated-one-way-binding="views" attr-value="{{views}}"></tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Isolated Scope with One Way Binding With Scope Objects</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Attr</th>
+					<th>Value</th>
+					<th>Control</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>data.rating</td>
+					<td>{{data.rating}}</td>
+					<td><input type="text" class="form-control" ng-model="data.rating"></td>
+				</tr>
+				<tr>
+					<td>data.views</td>
+					<td>{{data.views}}</td>
+					<td><input type="text" class="form-control" ng-model="data.views"></td>
+				</tr>
+
+				<tr dir-scope-isolated-one-way-binding="data.rating" attr-value="{{data.rating}}"></tr>
+				<tr dir-scope-isolated-one-way-binding="data.views" attr-value="{{data.views}}"></tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Isolated Scope with Two Way Binding With Scope Attributes</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Attr</th>
+					<th>Value</th>
+					<th>Control</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>rating</td>
+					<td>{{rating}}</td>
+					<td><input type="text" class="form-control" ng-model="rating"></td>
+				</tr>
+				<tr>
+					<td>views</td>
+					<td>{{views}}</td>
+					<td><input type="text" class="form-control" ng-model="views"></td>
+				</tr>
+
+				<tr dir-scope-isolated-two-way-binding="rating" attr-value="rating"></tr>
+				<tr dir-scope-isolated-two-way-binding="views" attr-value="views"></tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Isolated Scope with Two Way Binding With Scope Objects</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Attr</th>
+					<th>Value</th>
+					<th>Control</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>data.rating</td>
+					<td>{{data.rating}}</td>
+					<td><input type="text" class="form-control" ng-model="data.rating"></td>
+				</tr>
+				<tr>
+					<td>data.views</td>
+					<td>{{data.views}}</td>
+					<td><input type="text" class="form-control" ng-model="data.views"></td>
+				</tr>
+
+				<tr dir-scope-isolated-two-way-binding="data.rating" attr-value="data.rating"></tr>
+				<tr dir-scope-isolated-two-way-binding="data.views" attr-value="data.views"></tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+
+
+

@@ -1,0 +1,94 @@
+<style>
+	.even,
+	.even td {
+		background: #E5FFE4;
+	}
+	.odd,
+	.odd td {
+		background: #E4EFFD !important;
+	}
+	section {
+		padding-bottom: 10px;
+	}
+</style>
+
+
+<section class="panel">
+	<p ng-bind="p1"></p>
+	<p ng-bind-template="This is my paragraph: {{p1}}"></p>
+	<p ng-non-bindable>I can put {{anything}} between {{braces}} and angular does not perform bindings with the model</p>
+</section>
+
+<section class="panel">
+	<p>TASK 1: {{todo[0].action}}</p>
+	<input type="text" ng-model="todo[0].action">
+</section>
+
+<section class="panel">
+	<h3>TODO List:</h3>
+	<table class="table table-striped table-bordered table-hover table-condensed">
+		<thead>
+			<th>#</th>
+			<th ng-repeat="(propName, value) in todo[0]">{{propName | uppercase}}</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="task in todo" ng-class-even="'even'" ng-class-odd="'odd'">
+				<td>{{$index+1}}</td>
+				<td ng-repeat="prop in task">{{prop}}</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+<section class="panel">
+	<h3>TODO List (triplicating rows):</h3>
+	<table class="table table-striped table-bordered table-hover table-condensed">
+		<thead>
+			<th>#</th>
+			<th ng-repeat="(propName, value) in todo[0]">{{propName | uppercase}}</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat-start="task in todo | limitTo:2">
+				<td>{{$index+1}}</td>
+				<td ng-repeat="prop in task">{{prop}}</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td ng-repeat="prop in task">{{prop}}</td>
+			</tr>
+			<tr ng-repeat-end>
+				<td></td>
+				<td ng-repeat="prop in task">{{prop}}</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+<section class="panel">
+	<div class="btn-group" ng-init="partialView='test-template1.html'">
+		<button ng-click="partialView='test-template1.html'" class="btn btn-default btn-sm" ng-class="{'btn-primary':partialView==='test-template1.html'}">Partial View 1</button>
+		<button ng-click="partialView='test-template2.html'" class="btn btn-default btn-sm" ng-class="{'btn-primary':partialView==='test-template2.html'}">Partial View 2</button>
+	</div>
+	<ng-include src="'views/'+partialView"></ng-include>
+</section>
+
+<section class="panel">
+	<div class="well" ng-init="data.mode='None'">
+		<div class="radio" ng-repeat="button in ['None', 'Opt1', 'Opt2']">
+			<label><input type="radio" name="mode" ng-model="data.mode" value="{{button}}">{{button}}</label>
+		</div>
+	</div>
+	<div class="well">
+		<section ng-switch on="data.mode">
+			<section ng-switch-when="Opt1">
+				Option 1 is selected
+			</section>
+			<section ng-switch-when="Opt2">
+				Option 2 is selected
+			</section>
+			<section ng-switch-default>
+				Default option is selected
+			</section>
+		</section>
+	</div>
+</section>

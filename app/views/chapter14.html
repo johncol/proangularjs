@@ -1,0 +1,156 @@
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3>Value Filter</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>Filter</th>
+					<th>Value</th>
+					<th>Filtered Vaue</th>
+					<th>Options</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>lowercase</td>
+					<td>HOLA</td>
+					<td>{{'HOLA' | lowercase}}</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>uppercase</td>
+					<td>bye</td>
+					<td>{{'bye' | uppercase}}</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>number</td>
+					<td>26.456</td>
+					<td>{{'26.456' | number:0}}</td>
+					<td>Decimals: 0</td>
+				</tr>
+				<tr>
+					<td>number</td>
+					<td>26.456</td>
+					<td>{{'26.456' | number:1}}</td>
+					<td>Decimals: 1</td>
+				</tr>
+				<tr>
+					<td>number</td>
+					<td>26.456</td>
+					<td>{{'26.456' | number:2}}</td>
+					<td>Decimals: 2</td>
+				</tr>
+				<tr>
+					<td>date</td>
+					<td>{{sampleDate}}</td>
+					<td>{{sampleDate | date:'yyyy'}}</td>
+					<td>Format: 'yyyy'</td>
+				</tr>
+				<tr>
+					<td>date</td>
+					<td>{{sampleDate}}</td>
+					<td>{{sampleDate | date:'MMMM yyyy'}}</td>
+					<td>Format: 'MMMM yyyy'</td>
+				</tr>
+				<tr>
+					<td>date</td>
+					<td>{{sampleDate}}</td>
+					<td>{{sampleDate | date:'shortDate'}}</td>
+					<td>Format: 'shortDate'</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3>List 1</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Thing</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="thing in things | skip:3">
+					<td>{{thing.id}}</td>
+					<td>{{thing.value}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3>List 2</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Thing</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="thing in things | limitTo:3">
+					<td>{{thing.id}}</td>
+					<td>{{thing.value}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3>List 3</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Thing</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="thing in things | skip:3 | limitTo:3">
+					<td>{{thing.id}}</td>
+					<td>{{thing.value}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3>List 4</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Thing</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="thing in things | selectFilter:3:3">
+					<td>{{thing.id}}</td>
+					<td>{{thing.value}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>

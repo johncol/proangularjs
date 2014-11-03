@@ -1,0 +1,30 @@
+<div class="form-group">
+	<label for="json">JSON:</label>
+	<input type="text" class="form-control" name="json" id="json" ng-model="json">
+</div>
+
+<table class="table table-striper table-bordered">
+	<thead>
+		<th>Name</th>
+		<th>Category</th>
+		<th>Price</th>
+	</thead>
+	<tbody>
+		<tr ng-hide="products.length">
+			<td colspan="3">No products</td>
+		</tr>
+		<tr ng-repeat="product in products">
+			<td>{{product.name}}</td>
+			<td>{{product.category}}</td>
+			<td>{{product.price | currency}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="btn-group">
+	<button class="btn btn-primary" ng-click="loadProducts()">Load Products 1</button>
+	<button class="btn btn-primary" ng-click="loadProductsSecondWay()">Load Products 2</button>
+</div>
+
+<br>
+<br>

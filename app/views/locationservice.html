@@ -1,0 +1,43 @@
+<section class="panel panel-default" id="top">
+	<div class="panel-heading">
+		<h1 class="panel-title">Location Service</h1>
+	</div>
+	<div class="panel-body">
+		<div>
+			Try with 
+			<a href="http://localhost:9000/#/locationService/some/sample/path/?a=20&developer=John#somePartOfTheDocument">this URL</a>
+		</div>
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>$location Method</th>
+					<th>Result</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="prop in props(locationProps)" ng-init="value=locationProps[prop]">
+					<td>{{prop}}</td>
+					<td>{{value}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="panel-footer">
+		<div class="btn-group">
+			<button class="btn btn-default" ng-repeat="panel in panels" ng-click="goTo('panel' + panel)">Go to panel {{panel}}</button>
+		</div>
+	</div>
+</section>
+
+<section class="panel panel-default" ng-repeat="panel in panels" id="panel{{panel}}">
+	<div class="panel-heading">
+		<h1 class="panel-title">Test Panel #{{panel}}</h1>
+	</div>
+	<div class="panel-body">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus magnam commodi quae odit sit fugiat reprehenderit, quaerat debitis ex id qui? Assumenda blanditiis cumque et accusantium quas porro expedita, quo quaerat, tenetur dicta magnam! Eligendi illum sunt iure fugiat esse repudiandae, veritatis dolorum impedit dolor harum ullam atque totam tempora necessitatibus eos aliquam error voluptate sapiente incidunt nostrum omnis accusamus quisquam? Magnam optio dolores atque consequuntur quasi aliquid impedit, aspernatur dicta laboriosam enim adipisci expedita blanditiis doloribus velit veritatis. Voluptate consectetur hic nam, vel cumque tempore officia debitis saepe molestias modi provident! Dicta quidem vero, cum, iure laboriosam neque sed necessitatibus animi ducimus modi doloribus voluptatum aliquam odio amet asperiores quaerat commodi. Veritatis modi aspernatur laboriosam consectetur excepturi suscipit delectus aliquid quasi, voluptatum necessitatibus quia accusamus optio fugit ducimus autem tenetur repellat quisquam quod velit asperiores maiores quo! Laudantium, perspiciatis? Sunt reiciendis ratione amet, officiis aliquid minus minima, tempore corrupti.</p>
+	</div>
+	<div class="panel-footer">
+		<a ng-click="goTo('top')" href="">Top</a>
+	</div>
+</section>
+

@@ -1,0 +1,28 @@
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3>Directive 3</h3>
+		<button class="btn btn-primary" ng-click="increaseProfits()">Increase Profits</button>
+	</div>
+	<div class="panel-body">
+		<div directive-test-with-watch="people" data-directive-attr-name="profits | currency"></div>
+	</div>
+</section>
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3>Directive 2</h3>
+	</div>
+	<div class="panel-body">
+		<div table-directive="people" data-directive-attr-name="['id', 'first_name', 'last_name', 'email', 'country']"></div>
+	</div>
+</section>
+
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3>Directive 1</h3>
+	</div>
+	<div class="panel-body">
+		<div directive-test="people" data-directive-attr-name="profits | currency"></div>
+	</div>
+</section>

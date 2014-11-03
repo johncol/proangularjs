@@ -1,0 +1,18 @@
+<section class="panel">
+	<div class="well" ng-init="data.mode='None'">
+		<div class="radio" ng-repeat="button in ['None', 'Opt1', 'Opt2']">
+			<label><input type="radio" name="mode" ng-model="data.mode" value="{{button}}">{{button}}</label>
+		</div>
+	</div>
+	<div class="well">
+		<section ng-if="data.mode === 'Opt1'">
+			Option 1 is selected
+		</section>
+		<section ng-if="data.mode === 'Opt2'">
+			Option 2 is selected
+		</section>
+		<section ng-if="data.mode !== 'Opt1' && data.mode !== 'Opt2'">
+			Default option is selected
+		</section>
+	</div>
+</section>

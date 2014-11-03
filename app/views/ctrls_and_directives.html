@@ -1,0 +1,20 @@
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3>Controllers and Directives</h3>
+	</div>
+	<div class="panel-body">
+		<button class="btn btn-primary" ng-click="printProducts()">Print Products</button><br><br>
+		<table class="table table-striped" product-table="totalValue" product-data="products" ng-transclude>
+			<tr>
+				<th>Name</th>
+				<th>Quantity</th>
+			</tr>
+			<tr ng-repeat="item in products" product-item></tr>
+			<tr>
+				<th>Total:</th>
+				<th>{{totalValue}}</th>
+			</tr>
+			<tr reset-total product-data="products"></tr>
+		</table>
+	</div>
+</section>
